@@ -71,11 +71,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         function checkingUserName() {
-      var username = document.forms["register"]["username"].value;
-      if (username == null || username == "") {
-         alert("Please enter the username. Can’t be blank or empty !!!");
-         return false;
-      }
+    //   var username = document.forms["register"]["username"].value;
+    //   if (username == null || username == "") {
+    //      alert("Please enter the username. Can’t be blank or empty !!!");
+    //      return false;
+    //   }
 
       var email = document.forms["register"]['email'].value;
       if (email == null || email == "") {
@@ -89,11 +89,11 @@
          return false;
       }
 
-      var checkbox = document.getElementById("checkbox");
-      if(!checkbox.checked){
-        alert("Please accept the terms and conditions...");
-        return false;
-      }
+    //   var checkbox = document.getElementById("checkbox");
+    //   if(!checkbox.checked){
+    //     alert("Please accept the terms and conditions...");
+    //     return false;
+    //   }
 
       var a = document.createElement('a'); 
       a.appendChild(link);

@@ -31,15 +31,15 @@
                         
                         <div class="form-group">
                             <!-- <label for="pwd">Old Password *</label> -->
-                            <input type="password" class="form-control" id="pwd" placeholder="Old Password *">
+                            <input type="password" class="form-control" id="Opwd" placeholder="Old Password *">
                         </div>
                         <div class="form-group">
                             <!-- <label for="pwd">New Password *</label> -->
-                            <input type="password" class="form-control" id="pwd" placeholder="New Password *">
+                            <input type="password" class="form-control" id="Npwd" placeholder="New Password *">
                         </div>
                         <div class="form-group">
                             <!-- <label for="pwd">Confirm Password *</label> -->
-                            <input type="password" class="form-control" id="pwd" placeholder="Confirm Password *">
+                            <input type="password" class="form-control" id="Cpwd" placeholder="Confirm Password *">
                         </div>
 
                         <div id="user-input" class="inline">
@@ -52,7 +52,8 @@
                         </div>
                         
                         
-                        <button type="submit" class="btn btn-default" onclick="return checkingUserName()">Change Password</button><br>
+                        <button type="submit" class="btn btn-default" onclick="return checkingUserName()">
+                            Change Password</button><br>
                         <p2>Already have an account? <a href="login.html">Log in</a></p2>
                     </form>
                     
@@ -69,35 +70,49 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         function checkingUserName() {
-      var username = document.forms["register"]["username"].value;
-      if (username == null || username == "") {
-         alert("Please enter the username. Can’t be blank or empty !!!");
-         return false;
-      }
+    //   var username = document.forms["register"]["username"].value;
+    //   if (username == null || username == "") {
+    //      alert("Please enter the username. Can’t be blank or empty !!!");
+    //      return false;
+    //   }
 
-      var email = document.forms["register"]['email'].value;
-      if (email == null || email == "") {
-         alert("Please enter the email address. Can’t be blank or empty !!!");
-         return false;
-      }
+    //   var email = document.forms["register"]['email'].value;
+    //   if (email == null || email == "") {
+    //      alert("Please enter the email address. Can’t be blank or empty !!!");
+    //      return false;
+    //   }
 
-      var pass = document.forms["register"]['pwd'].value;
-      if (pass == null || pass == "") {
+      var Opass = document.forms["register"]['Opwd'].value;
+      if (Opass == null || Opass == "") {
          alert("Please enter the password. Can’t be blank or empty !!!");
          return false;
       }
-
-      var cpwd=document.forms["register"]["cpwd"].value;
-      if(pass!=cpwd){
-        alert("Re Confirm Password!!!");
+      var Npass = document.forms["register"]['Npwd'].value;
+      if (Npass == null || Npass == "") {
+         alert("Please enter the password. Can’t be blank or empty !!!");
+         return false;
+      }
+      var Cpass = document.forms["register"]['Cpwd'].value;
+      if (Cpass == null || Cpass == "") {
+         alert("Please enter the password. Can’t be blank or empty !!!");
+         return false;
+      }
+      if(Cpass!=Opass){
+        alert("Incorrect Password!!!");
         return false;
       }
 
-      var checkbox = document.getElementById("checkbox");
-      if(!checkbox.checked){
-        alert("Please accept the terms and conditions...");
-        return false;
-      }
+    //   var cpwd=document.forms["register"]["cpwd"].value;
+    //   if(pass!=cpwd){
+    //     alert("Re Confirm Password!!!");
+    //     return false;
+    //   }
+
+    //   var checkbox = document.getElementById("checkbox");
+    //   if(!checkbox.checked){
+    //     alert("Please accept the terms and conditions...");
+    //     return false;
+    //   }
    }
    var captcha;
 function generate() {

@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group">
                             <!-- <label for="pwd">Mobile Number *</label> -->
-                            <input type="number" class="form-control" id="email" placeholder="Phone no.">
+                            <input type="number" class="form-control" id="number" placeholder="Phone no.">
                         </div>
                         <div class="form-group">
                             <!-- <label for="pwd">Password *</label> -->
@@ -61,6 +61,8 @@
                         </div>
                         <div id="image" class="inline" selectable="False">
                         </div>
+                        
+                        
                         <button type="submit" class="btn btn-default" onclick="return checkingUserName()">Create Account</button><br>
                         <p2>Already have an account? <a href="login.html">Log in</a></p2>
                     </form>
@@ -77,8 +79,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
-        function checkingUserName() {
-      var username = document.forms["register"]["username"].value;
+function checkingUserName() {
+      var username = document.forms["register"]['Username'].value;
       if (username == null || username == "") {
          alert("Please enter the username. Can’t be blank or empty !!!");
          return false;
@@ -96,17 +98,17 @@
          return false;
       }
 
-      var cpwd=document.forms["register"]["cpwd"].value;
+      var cpwd=document.forms["register"]['cpwd'].value;
       if(pass!=cpwd){
         alert("Re Confirm Password!!!");
         return false;
       }
 
-      var checkbox = document.getElementById("checkbox");
-      if(!checkbox.checked){
-        alert("Please accept the terms and conditions...");
-        return false;
-      }
+    //   var checkbox = document.getElementById("checkbox");
+    //   if(!checkbox.checked){
+    //     alert("Please accept the terms and conditions...");
+    //     return false;
+    //   }
    }
 
    function generate() {
